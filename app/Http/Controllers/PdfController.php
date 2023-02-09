@@ -2798,7 +2798,7 @@ class PdfController extends Controller
         // for ($i = 0; $i < 2; $i++) {
 
 
-        $this->fpdf->AddPage("P", ['210', '148']);
+        $this->fpdf->AddPage("P", ['310', '148']);
 
         $this->fpdf->Image(public_path("/Photos/Logos/" . $entete), 3, 5, 140, 27,  "");
 
