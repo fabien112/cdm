@@ -43,7 +43,7 @@
                                                         <option v-for="(data,
                                                         i) in ClassListes" :key="i" :value="data.id">
                                                             {{
-                                                                    data.libelleClasse
+                                                                data.libelleClasse
                                                             }}
                                                         </option>
                                                     </select>
@@ -52,29 +52,26 @@
 
                                         </div>
 
-                                        <div class="row" >
-                                            <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
 
                                                 <div class="form-group">
                                                     <button @click="update"
-                                                        class="waves-effect waves-light btn mb-5  btn btn-danger btn-block ">
+                                                        class="waves-effect waves-light btn mb-5  btn btn-success btn-block ">
 
-                                                        LANCER LE CALCULATEUR DE MOYENNES
+                                                        CALCULATEUR DE MOYENNES
                                                     </button>
                                                 </div>
                                             </div>
 
 
-                                        </div> <br>
-
-                                        <div class="row" >
-                                            <div class="col-md-12">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <button @click="afficher"
-                                                        class="waves-effect waves-light btn mb-5  btn btn-warning btn-block">
+                                                        class="waves-effect waves-light btn mb-5  btn btn-primary btn-block">
                                                         <!-- <Icon type="md-printer"  />
                                                          -->
-                                                     LANCER LES  BULLETINS DE NOTES EN PDF
+                                                        LANCER LES BULLETINS DE NOTES EN PDF
                                                     </button>
                                                 </div>
 
@@ -168,7 +165,7 @@ export default {
         );
 
         this.ClassListes = response2.data;
-        this.ClassListes =  this.ClassListes.filter(item => item.eleves.length > 0 )
+        this.ClassListes = this.ClassListes.filter(item => item.eleves.length > 0)
 
 
         const response4 = await this.callApi(
